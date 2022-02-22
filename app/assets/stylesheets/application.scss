@@ -1,0 +1,122 @@
+//= require_tree .
+//= require_self
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body{
+  padding-top: 56px;
+}
+
+*{
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+*{
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.notice{
+  margin: 8px auto;
+  padding: 16px;
+
+  width: 100%;
+
+  border-radius: 16px 16px 16px 16px;
+}
+
+.notice:empty{
+  display: none;
+}
+
+.image_x16{
+  object-fit: contain;
+  width: 16px;
+  height: 16px;
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.image_x24{
+  object-fit: contain;
+  width: 24px;
+  height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.image_x32{
+  object-fit: contain;
+  width: 32px;
+  height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.image_x48{
+  object-fit: contain;
+  width: 48px;
+  height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+}
+
+.image_x64{
+  object-fit: contain;
+  width: 64px;
+  height: 64px;
+  max-width: 64px;
+  max-height: 64px;
+}
+
+.image_x92{
+  object-fit: contain;
+  width: 92px;
+  height: 92px;
+  max-width: 92px;
+  max-height: 92px;
+}
+
+.image_x128{
+  object-fit: contain;
+  width: 128px;
+  height: 128px;
+  max-width: 128px;
+  max-height: 128px;
+}
+
+.image_x256{
+  object-fit: contain;
+  width: 256px;
+  height: 256px;
+  max-width: 256px;
+  max-height: 256px;
+}
+
+.image_x512{
+  object-fit: contain;
+  width: 512px;
+  height: 512px;
+  max-width: 512px;
+  max-height: 512px;
+}
+
+.image_thumb{
+  background-color: rgb(31, 31, 31);
+  object-fit: contain;
+  width: 256px;
+  height: 256px;
+  max-width: 256px;
+  max-height: 256px;
+}
+
+img.fit{
+  max-width: 100%;
+  object-fit: cover;
+}

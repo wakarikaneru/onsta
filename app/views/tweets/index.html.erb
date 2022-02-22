@@ -1,0 +1,21 @@
+<div class="m-2">
+  <%= render 'form', tweet: @tweet, parent_id: nil, prompt: "", button: "スレッド作成" %>
+</div>
+
+<div class="m-1">
+  <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+    <% @tweets.each do |tweet| %>
+      <div class="m-1">
+        <% if tweet.image.attached? %>
+          <%= link_to tweet do %>
+            <%= image_tag tweet.image.variant(resize: "256x256").processed, class:"image_thumb" %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="d-flex flex-row justify-content-center m-4">
+    <%= paginate @tweets, theme: 'twitter-bootstrap-4'%>
+  </div>
+</div>

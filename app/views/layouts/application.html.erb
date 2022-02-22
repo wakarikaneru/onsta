@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>おんスタグラム</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="/">おんスタグラム</a>
+      </div>
+    </nav>
+
+    <div class='container'>
+
+      <div id="notice" class="notice alert alert-info"><%= notice %></div>
+      <div id="alert" class="notice alert alert-danger"><%= alert %></div>
+
+      <%= yield %>
+
+      <div class="m-5">
+        更新履歴
+        <ul>
+          <li>レスを付けられるようになった</li>
+          <li>画像の添付に対応(png・jpgのみ)</li>
+          <li>書き込めるようになった</li>
+        </ul>
+      </div>
+
+    </div>
+
+
+  </body>
+</html>

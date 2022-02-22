@@ -1,0 +1,44 @@
+<div class="d-flex flex-row m-1">
+  <div class="m-1">
+    <% if @tweet.image.attached? %>
+      <%= link_to @tweet.image do %>
+        <%= image_tag @tweet.image.variant(resize: "512x512").processed, class:"image_x512" %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="flex-grow-1 m-1">
+    <div>
+      <%= I18n.l Time.zone.now %> ID:<%= @tweet.kakikomi_id_disp %>
+    </div>
+    <div>
+      <%= @tweet.content %>
+    </div>
+  </div>
+</div>
+
+<hr/>
+<div class="">
+  <% @reses.each do |res| %>
+    <div class="m-1">
+      <div class="d-flex flex-row m-1">
+        <div class="m-1">
+          <% if res.image.attached? %>
+            <%= link_to res.image do %>
+              <%= image_tag res.image.variant(resize: "128x128").processed, class:"image_x128" %>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="flex-grow-1 m-1">
+          <%= res.content %>
+        </div>
+      </div>
+    </div>
+    <hr/>
+  <% end %>
+</div>
+
+<div class="m-2">
+  <%= render 'form', tweet: @res, parent_id: @tweet.id, prompt: "", button: "書き込む" %>
+</div>
